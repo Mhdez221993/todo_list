@@ -12,6 +12,8 @@ const form = document.getElementById('task-form') as HTMLFormElement | null
 const input = document.querySelector<HTMLInputElement>('#task-title')
 const tasks: Task[] = loadTasks()
 
+tasks.forEach(addListItem)
+
 form?.addEventListener('submit', (e) => {
   e.preventDefault()
 
