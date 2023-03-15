@@ -27,15 +27,18 @@ const TodoList = () => {
   };
 
   return (
-    <div>
+    <div className="todo-container">
       <h1>Todo List</h1>
-      <form onSubmit={addTodo}>
+      <form onSubmit={addTodo} className="form-container">
         <input
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
+          className="input-add-todo"
         />
-        <button type="submit">Add</button>
+        <button type="submit" className="add-todo">
+          Add
+        </button>
       </form>
       <ul>
         {todos.map((todo) => (

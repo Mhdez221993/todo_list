@@ -8,10 +8,15 @@ const TodoItem = ({ todo, toggleTodo, removeTodo }) => {
         checked={todo.done}
         onChange={() => toggleTodo(todo.id)}
       />
-      <span style={{ textDecoration: todo.done ? "line-through" : "none" }}>
+      <span
+        className="text"
+        style={{ textDecoration: todo.done ? "line-through" : "none" }}
+      >
         {todo.text}
       </span>
-      <button onClick={() => removeTodo(todo.id)}>Remove</button>
+      <button className="delete-button" onClick={() => removeTodo(todo.id)}>
+        Remove
+      </button>
     </li>
   );
 };
